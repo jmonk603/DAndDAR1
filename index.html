@@ -11,7 +11,9 @@
     <a-scene vr-mode-ui="enabled: false;" embedded arjs="sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3; trackingMethod: best; debugUIEnabled: False;">
       <a-assets>
         <a-asset-item id="tree" src="models/tree.gltf"></a-asset-item>
-        <a-asset-item id="barb" src="models/barb-acceptquest.gltf"></a-asset-item>
+        <a-asset-item id="barb1W" src="models/barb-acceptquest.gltf"></a-asset-item>
+        <a-asset-item id="barb2W" src="models/barb-winbar.gltf"></a-asset-item>
+        <a-asset-item id="barb4W" src="models/barb-windrag.gltf"></a-asset-item>
       </a-assets>
 
       <a-marker preset='kanji'>
@@ -32,19 +34,25 @@
         <a-box position="0 0 0" material="color: blue;"></a-box>
       </a-marker>
       <a-marker type='barcode' value='4'>
-        <a-box position="0 0 0" material="color: blue;"></a-box>
+        <a-entity position="0 0 0"
+                  rotation="0 0 0"
+                  scale="4 4 4"
+                  gltf-model="#barb4W">
       </a-marker>
       <a-marker type='barcode' value='3'>
         <a-box position="0 0 0" material="color: blue;"></a-box>
       </a-marker>
       <a-marker type='barcode' value='2'>
-        <a-box position="0 0 0" material="color: blue;"></a-box>
+        <a-entity position="0 0 0"
+                  rotation="0 0 0"
+                  scale="4 4 4"
+                  gltf-model="#barb2W">
       </a-marker>
       <a-marker type='barcode' value='1'>
         <a-entity position="0 0 0"
                   rotation="0 0 0"
                   scale="4 4 4"
-                  gltf-model="#barb">
+                  gltf-model="#barb1W">
       </a-marker>
 
       <a-entity camera></a-entity>
